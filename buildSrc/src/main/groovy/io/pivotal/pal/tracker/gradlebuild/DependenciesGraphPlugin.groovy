@@ -61,6 +61,7 @@ class DependenciesGraphPlugin implements Plugin<Project> {
     }
 
     private static boolean isProjectExcluded(def project) {
+        //return false;
         return project.name.contains("support")
     }
 }
