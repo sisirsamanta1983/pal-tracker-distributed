@@ -40,7 +40,7 @@ public class ProjectController {
     @GetMapping("/{projectId}")
     public ProjectInfo get(@PathVariable long projectId) {
         ProjectRecord record = gateway.find(projectId);
-
+        System.out.println("Project is "+record);
         if (record != null) {
             return present(record);
         }
